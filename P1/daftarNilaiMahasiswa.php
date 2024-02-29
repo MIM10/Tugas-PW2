@@ -16,40 +16,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
-
     <title>Nilai Siswa</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            height: 100dvh;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-        table {
-            width: 1000px;
-            border: 1px solid #ccc;
-        }
-        th,td {
-            padding: 10px;
-        }
-        .thead-dark {
-            background-color: #333;
-            color: #fff;
-        }
+        * {margin: 0;padding: 0;}body {display: flex;justify-content: center;height: 100dvh;}.container {display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 20px;}table {width: 1000px;border: 1px solid #ccc;}th,td {padding: 10px;}.thead-dark {background-color: #333;color: #fff;}
     </style>
 </head>
 
@@ -73,7 +42,7 @@
 
                     <tr>
                         <?php $nilai_akhir = ($nilai["uts"] + $nilai["uas"] + $nilai["tugas"]) / 3; ?>
-                        <td><?= $nilai["id"]?></td>
+                        <td style="text-align: center; width: 20px;"><?= $nilai["id"]?></td>
                         <td><?= $nilai["nama"]?></td>
                         <td><?= $nilai["nim"]?></td>
                         <td><?= $nilai["uts"]?></td>
@@ -88,9 +57,6 @@
         </table>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
