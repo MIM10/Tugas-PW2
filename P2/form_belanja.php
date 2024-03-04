@@ -1,7 +1,11 @@
 <?php
-    $customer = $_POST["customer"];
-    $produk = $_POST["produk"];
-    $jumlah = $_POST["jumlah"];
+    // $customer = isset($_POST['customer']) ? $_POST['customer'] : null;
+    // $produk = isset($_POST['produk']) ? $_POST['produk'] : null;
+    // $jmlh = isset($_POST['jumlah']) ? $_POST['jumlah'] : null;
+
+    $customer = $_POST['customer'] ?? null;
+    $produk = $_POST['produk'] ?? null;
+    $jmlh = $_POST['jumlah'] ?? null;
 
     // Set harga untuk setiap produk
     $hargaTV = 4200000;
@@ -9,13 +13,13 @@
     $hargaMesinCuci = 3800000;
 
     // Hitung total harga
-    $totalHarga = 0;
+    $ttlhrga = 0;
     if ($produk == "TV") {
-        $totalHarga = $hargaTV * $jumlah;
+        $ttlhrga = $hargaTV * $jmlh;
     } elseif ($produk == "Kulkas") {
-        $totalHarga = $hargaKulkas * $jumlah;
+        $ttlhrga = $hargaKulkas * $jmlh;
     } elseif ($produk == "Mesin Cuci") {
-        $totalHarga = $hargaMesinCuci * $jumlah;
+        $ttlhrga = $hargaMesinCuci * $jmlh;
     }
 ?>
 
@@ -71,11 +75,11 @@
                 </div>
             </div>
         </form>
-        <div class="card p-3 shadow-sm">
-            <h6>Nama Customer : <?= $customer; ?></h6>
-            <h6>Proudk Pilihan : <?= $produk; ?></h6>
-            <h6>Jumlah Beli : <?= $jumlah; ?></h6>
-            <h6>Total Belanja : <?= $totalHarga; ?></h6>
+        <div id="card" class="card p-3 shadow-sm">
+            <span>Nama Customer : <?= $customer; ?></span>
+            <span>Proudk Pilihan : <?= $produk; ?></span>
+            <span>Jumlah Beli : <?= $jmlh; ?></span>
+            <span>Total Belanja : <?= $ttlhrga; ?></span>
         </div>
     </div>
 </body>
