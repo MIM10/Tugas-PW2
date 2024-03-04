@@ -1,7 +1,4 @@
 <?php
-    // $customer = isset($_POST['customer']) ? $_POST['customer'] : null;
-    // $produk = isset($_POST['produk']) ? $_POST['produk'] : null;
-    // $jmlh = isset($_POST['jumlah']) ? $_POST['jumlah'] : null;
 
     $customer = $_POST['customer'] ?? null;
     $produk = $_POST['produk'] ?? null;
