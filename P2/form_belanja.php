@@ -1,4 +1,7 @@
 <?php
+    // $customer = isset($_POST['customer']) ? $_POST['customer'] : null;
+    // $produk = isset($_POST['produk']) ? $_POST['produk'] : null;
+    // $jmlh = isset($_POST['jumlah']) ? $_POST['jumlah'] : null;
 
     $customer = $_POST['customer'] ?? null;
     $produk = $_POST['produk'] ?? null;
@@ -31,10 +34,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-
 <body>
     <div class="mx-5 mt-5">
-        <form action="form_belanja.php" method="post" class="card p-3 shadow-sm mb-4">
+        <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="post" class="card position-relative p-3 shadow-sm mb-4">
             <h2>Belanja Online</h2>
             <hr>
             <div class="form-group row">
@@ -69,6 +71,19 @@
             <div class="form-group row">
                 <div class="offset-4 col-8">
                     <button name="submit" type="submit" class="btn btn-primary">Kirim</button>
+                </div>
+            </div>
+            <div class="card position-absolute" id="daftarhrg" style="right: 15px;">
+                <div class="card-header">
+                    Daftar Harga
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">TV : 4.200.000</li>
+                    <li class="list-group-item">Kulkas : 3.100.000</li>
+                    <li class="list-group-item">Mesin Cuci : 3.800.000</li>
+                </ul>
+                <div class="card-footer">
+                    Harga Dapat Berubah Setiap Saat
                 </div>
             </div>
         </form>
